@@ -23,7 +23,7 @@ public class ServiciosService implements IServiciosService{
 	@Override
 	public ResponseDTO getAll() {
 
-		return new ResponseDTO( serviciosMapper.listEntityToDto( serviciosRepository.findAll()), true, "ok", HttpStatus.OK);
+		return new ResponseDTO( serviciosMapper.listEntityToDTO( serviciosRepository.findAll()), true, "ok", HttpStatus.OK);
 	}
 
 
@@ -65,7 +65,7 @@ public class ServiciosService implements IServiciosService{
 	@Override
 	public ResponseDTO updateServicios(ServiciosDTO serviciosDTO) {
 
-		ServiciosEntity serviciosEntity =serviciosMapper.dtoToEntity(serviciosDTO);
+		ServiciosEntity serviciosEntity = serviciosMapper.dtoToEntity(serviciosDTO);
 
 		serviciosRepository.save(serviciosEntity);
 
