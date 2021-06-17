@@ -1,19 +1,20 @@
 package com.reservaturnos.sistema.service;
 
-import java.util.List;
-import com.reservaturnos.sistema.entity.ServiciosEntity;
+import com.reservaturnos.sistema.dto.ResponseDTO;
+import com.reservaturnos.sistema.dto.ServiciosDTO;
+
 
 
 public interface IServiciosService {
 	
-	public List<ServiciosEntity> getAll();
+	public ResponseDTO getAll();
 	
-	public ServiciosEntity getServiciosById(Integer id_servicio);
+	public ResponseDTO getServiciosById(Integer id_servicio);
 	
-	public ServiciosEntity createServicios(ServiciosEntity serviciosEntity);
+	public ResponseDTO createServicios(ServiciosDTO serviciosDTO);
 	
-	public ServiciosEntity updateServicios(ServiciosEntity serviciosEntity);
+	public ResponseDTO updateServicios(ServiciosDTO serviciosDTO);
 	
-	public void deleteServicios(Integer id_servicio);
+	public ResponseDTO deleteServicios(Integer id_servicio);
 	
 }
